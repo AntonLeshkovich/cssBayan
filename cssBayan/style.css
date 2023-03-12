@@ -48,15 +48,6 @@ body {
     -webkit-backdrop-filter: blur(7.1px);
     border: 1px solid rgba(83, 83, 83, 0.14);
 }
-.accordion__list:hover .item__icon {
-    opacity: 1;
-}
-.accordion__list:hover .accordion__head {
-    color: #fff;
-}
-.accordion__list:hover .item__line {
-    background: #fff;
-}
 .accordion__item {
     padding-bottom: 0.3em;
 }
@@ -159,4 +150,17 @@ body {
     background: url("./img/meme-5.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
+}
+
+/* hover */
+@media (any-hover: hover) {
+    .accordion__list:hover .item__icon {
+        opacity: 1;
+    }
+    .accordion__list:hover .accordion__head {
+        color: #fff;
+    }
+    .accordion__list:hover .item__line {
+        background: #fff;
+    }
 }
