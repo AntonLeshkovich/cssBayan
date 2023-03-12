@@ -29,7 +29,7 @@ body {
     color: #fff;
     cursor: default;
 
-    background: rgba(83, 83, 83, 0.6);
+    background: rgba(168, 168, 168, 0.6);
     border-radius: 0.5em;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.1px);
@@ -42,7 +42,7 @@ body {
     padding: 0.94em;
     cursor: pointer;
 
-    background: rgba(83, 83, 83, 0.6);
+    background: rgba(168, 168, 168, 0.6);
     border-radius: 1em;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.1px);
