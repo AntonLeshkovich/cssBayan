@@ -85,7 +85,7 @@ body {
     height: 20em;
 }
 .accordion__input:checked ~ .accordion__head .item__icon {
-    transform: rotate(90deg);
+    transform: rotate(90deg) scale(0.87);
 }
 .accordion__input:checked ~ .accordion__content .img__block {
     height: 17em;
@@ -97,10 +97,10 @@ body {
     background: #fff;
 }
 .item__icon {
-    width: 1em;
-    height: 1em;
+    width: 1.2em;
+    height: 1.2em;
     background: url("./img/close-icon.svg") center/cover;
-    transform: rotate(45deg);
+    transform: rotate(45deg) scale(0.8);
     opacity: 0;
     transition: transform .3s, opacity .3s;
 }
@@ -159,7 +159,7 @@ body {
         height: 20em;
     }
     .accordion__item:hover .item__icon {
-        transform: rotate(90deg);
+        transform: rotate(90deg) scale(0.87);
     }
     .accordion__item:hover .img__block {
         height: 17em;
