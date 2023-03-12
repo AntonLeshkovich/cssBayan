@@ -52,15 +52,6 @@ body {
 .accordion__item {
     padding-bottom: 0.3em;
 }
-.accordion__item:hover .accordion__content {
-    height: 20em;
-}
-.accordion__item:hover .item__icon {
-    transform: rotate(90deg);
-}
-.accordion__item:hover .img__block {
-    height: 17em;
-}
 .item__line {
     display: block;
     width: 100%;
@@ -163,6 +154,15 @@ body {
     }
     .accordion__list:hover .item__line {
         background: #fff;
+    }
+    .accordion__item:hover .accordion__content {
+        height: 20em;
+    }
+    .accordion__item:hover .item__icon {
+        transform: rotate(90deg);
+    }
+    .accordion__item:hover .img__block {
+        height: 17em;
     }
 }
 
