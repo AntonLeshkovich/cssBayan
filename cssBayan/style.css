@@ -60,6 +60,7 @@ body {
     /* background: rgb(255, 255, 255, 0.7); */
     background: rgba(0, 0, 0, 0.6);
     transition: background .3s;
+    cursor: default;
 }
 .accordion__head {
     display: flex;
@@ -170,7 +171,6 @@ body {
 @media(max-width: 900px) {
     html {
         font-size: 13px;
-        
     }
 }
 @media(max-width: 600px) {
