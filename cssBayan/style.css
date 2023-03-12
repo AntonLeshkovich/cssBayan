@@ -28,6 +28,7 @@ body {
     font-weight: 700;
     color: #fff;
     cursor: default;
+    text-align: center;
 
     background: rgba(168, 168, 168, 0.6);
     border-radius: 0.5em;
@@ -60,7 +61,6 @@ body {
     /* background: rgb(255, 255, 255, 0.7); */
     background: rgba(0, 0, 0, 0.6);
     transition: background .3s;
-    cursor: default;
 }
 .accordion__head {
     display: flex;
@@ -92,6 +92,9 @@ body {
 .accordion__input:checked ~ .accordion__content .img__block {
     height: 17em;
 }
+.accordion__input:checked ~ .accordion__content .img__block .img__text {
+    opacity: 1;
+}
 .accordion__input:checked ~ .accordion__head {
     color: #fff;
 }
@@ -120,17 +123,51 @@ body {
     transition: height .3s;
     border-radius: 1em;
 }
+.img__text {
+    display: block;
+    font-weight: 700;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s;
+}
+.img__text-1 {
+    margin-top: 0.3em;
+    font-size: 2em;
+}
+.img__text-2 {
+    margin-top: 0.3em;
+    font-size: 3.8em;
+    margin-right: 1em;
+}
+.img__text-3 {
+    margin-top: 0.3em;
+    font-size: 2.2em;
+}
+.img__text-4 {
+    margin-top: 1em;
+    font-size: 2.2em;
+    margin-left: 0.5em;
+    line-height: 1.2em;
+}
+.img__text-5 {
+    margin-top: 0.5em;
+    font-size: 1.6em;
+    margin-right: 0.5em;
+}
 .img__block-1 {
+    text-align: center;
     background: url("./img/meme-1.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
 }
 .img__block-2 {
+    text-align: right;
     background: url("./img/meme-2.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
 }
 .img__block-3 {
+    text-align: center;
     background: url("./img/meme-3.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -141,6 +178,7 @@ body {
     background-repeat: no-repeat;
 }
 .img__block-5 {
+    text-align: right;
     background: url("./img/meme-5.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -166,6 +204,9 @@ body {
     .accordion__item:hover .img__block {
         height: 17em;
     }
+    .accordion__item:hover .img__text {
+        opacity: 1;
+    }
 }
 
 @media(max-width: 900px) {
@@ -177,5 +218,8 @@ body {
     html {
         font-size: 9px;
         font-weight: 400;
+    }
+    .accordion__title {
+        max-width: 6.5em;
     }
 }
