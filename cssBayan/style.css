@@ -1,18 +1,64 @@
 @import "./reset.css";
 
-.accordion__container {
-    max-width: 37.5rem;
-    padding: 0 0.94rem;
+/* font-family: 'Roboto', sans-serif; */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+    max-width: 41.8em;
+    padding: 0 0.94em;
     margin: 0 auto;
 }
+.accordion__container {
+    max-width: 37.5em;
+    padding: 0.94em;
+    margin: 2em auto 0 ;
+    background: url("./img/bg-memes.jpg");
+    background-position: top;
+    background-size: 60%;
+    border-radius: 1em;
+}
 .accordion__title {
-    margin: 1rem 0;
+    max-width: 6em;
+    padding: 0.5em;
+    margin: 0.5em 0 0.5em 2em;
     font-size: 2rem;
     font-weight: 700;
-}
+    color: #fff;
+    cursor: default;
 
+    background: rgba(83, 83, 83, 0.6);
+    border-radius: 0.5em;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.1px);
+    -webkit-backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(83, 83, 83, 0.14);
+}
+.accordion__list {
+    max-width: 37.5em;
+    min-height: 13.31em;
+    padding: 0.94em;
+    cursor: pointer;
+
+    background: rgba(83, 83, 83, 0.6);
+    border-radius: 1em;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.1px);
+    -webkit-backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(83, 83, 83, 0.14);
+}
+.accordion__list:hover .item__icon {
+    opacity: 1;
+}
+.accordion__list:hover .accordion__head {
+    color: #fff;
+}
+.accordion__list:hover .item__line {
+    background: #fff;
+}
 .accordion__item {
-    /* border: 1px solid #000; */
+    padding-bottom: 0.3em;
 }
 .accordion__item:hover .accordion__content {
     height: 20em;
@@ -23,8 +69,15 @@
 .accordion__item:hover .img__block {
     height: 17em;
 }
+.item__line {
+    display: block;
+    width: 100%;
+    height: 0.12em;
+    border-radius: 0.1em;
+    background: rgb(255, 255, 255, 0.7);
+    transition: background .3s;
+}
 .accordion__head {
-    /* display: block; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,9 +85,10 @@
     height: 1.7em;
     font-size: 1.25rem;
     font-weight: 700;
+    color: rgb(255, 255, 255, 0.7);
     cursor: pointer;
+    transition: color .3s;
 }
-
 .accordion__input {
     width: 0;
     height: 0;
@@ -51,12 +105,19 @@
 .accordion__input:checked ~ .accordion__content .img__block {
     height: 17em;
 }
+.accordion__input:checked ~ .accordion__head {
+    color: #fff;
+}
+.accordion__input:checked + .item__line {
+    background: #fff;
+}
 .item__icon {
-    width: 1.3em;
-    height: 1.3em;
+    width: 1.1em;
+    height: 1.1em;
     background: url("./img/close-icon.svg") center/cover;
     transform: rotate(45deg);
-    transition: transform .3s;
+    opacity: 0;
+    transition: transform .3s, opacity .3s;
 }
 .accordion__content {
     display: flex;
@@ -68,14 +129,34 @@
     /* background-color: tomato; */
 }
 .img__block {
-    width: 17em;
+    width: 27em;
     height: 0;
     transition: height .3s;
-    background-color: blue;
+    border-radius: 1em;
+    /* background-color: blue; */
 }
-.item__line {
-    display: block;
-    width: 100%;
-    height: 0.16em;
-    background: #000;
+.img__block-1 {
+    background: url("./img/meme-1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.img__block-2 {
+    background: url("./img/meme-2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.img__block-3 {
+    background: url("./img/meme-3.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.img__block-4 {
+    background: url("./img/meme-4.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.img__block-5 {
+    background: url("./img/meme-5.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
