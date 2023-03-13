@@ -97,6 +97,9 @@ body {
 .item__text {
     cursor: pointer;
 }
+.item__text:active ~ .accordion__content .img__block {
+    border: 0.2em solid #fff;
+}
 .item__icon {
     display: block;
     width: 1.2em;
@@ -106,6 +109,9 @@ body {
     opacity: 0;
     transition: transform .3s, opacity .3s;
     cursor: pointer;
+}
+.item__icon:active ~ .accordion__content .img__block {
+    border: 0.2em solid #fff;
 }
 .accordion__content {
     display: flex;
