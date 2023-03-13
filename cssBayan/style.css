@@ -54,6 +54,13 @@ body {
     padding-bottom: 0.3em;
     transition: height .3s;
 }
+.accordion__input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    display: none;
+}
 .item__line {
     display: block;
     width: 100%;
@@ -99,34 +106,6 @@ body {
     opacity: 0;
     transition: transform .3s, opacity .3s;
     cursor: pointer;
-}
-.accordion__input {
-    width: 0;
-    height: 0;
-    appearance: none;
-    -webkit-appearance: none;
-    display: none;
-}
-.accordion__input:checked ~ .accordion__head {
-    height: 17em;
-}
-.accordion__input:checked ~ .accordion__head .accordion__content {
-    height: 20em;
-}
-.accordion__input:checked ~ .accordion__head .item__icon {
-    transform: rotate(90deg) scale(0.87);
-}
-.accordion__input:checked ~ .accordion__head .accordion__content .img__block {
-    height: 17em;
-}
-.accordion__input:checked ~ .accordion__head .accordion__content .img__block .img__text {
-    opacity: 1;
-}
-.accordion__input:checked ~ .accordion__head {
-    color: #fff;
-}
-.accordion__input:checked + .item__line {
-    background: #fff;
 }
 .accordion__content {
     display: flex;
@@ -206,6 +185,29 @@ body {
     background-repeat: no-repeat;
 }
 
+/* input checked */
+.accordion__input:checked ~ .accordion__head {
+    height: 17em;
+}
+.accordion__input:checked ~ .accordion__head .accordion__content {
+    height: 20em;
+}
+.accordion__input:checked ~ .accordion__head .item__icon {
+    transform: rotate(90deg) scale(0.87);
+}
+.accordion__input:checked ~ .accordion__head .accordion__content .img__block {
+    height: 17em;
+}
+.accordion__input:checked ~ .accordion__head .accordion__content .img__block .img__text {
+    opacity: 1;
+}
+.accordion__input:checked ~ .accordion__head {
+    color: #fff;
+}
+.accordion__input:checked + .item__line {
+    background: #fff;
+}
+
 /* hover */
 @media (any-hover: hover) {
     .accordion__list:hover .item__icon {
@@ -234,6 +236,7 @@ body {
     }
 }
 
+/* adaptive */
 @media(max-width: 900px) {
     html {
         font-size: 13px;
