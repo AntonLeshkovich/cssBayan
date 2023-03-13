@@ -32,10 +32,9 @@ body {
 
     background: rgba(168, 168, 168, 0.6);
     border-radius: 0.5em;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.1px);
-    -webkit-backdrop-filter: blur(7.1px);
-    border: 1px solid rgba(83, 83, 83, 0.14);
+    box-shadow: 0 0.25em 1.875em rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.437em);
+    -webkit-backdrop-filter: blur(0.437em);
 }
 .accordion__list {
     max-width: 37.5em;
@@ -45,10 +44,9 @@ body {
 
     background: rgba(168, 168, 168, 0.6);
     border-radius: 1em;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.1px);
-    -webkit-backdrop-filter: blur(7.1px);
-    border: 1px solid rgba(83, 83, 83, 0.14);
+    box-shadow: 0 0.25em 1.875em rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.437em);
+    -webkit-backdrop-filter: blur(0.437em);
 }
 .accordion__item {
     padding-bottom: 0.3em;
@@ -248,12 +246,12 @@ body {
 /* adaptive */
 @media(max-width: 900px) {
     html {
-        font-size: 13px;
+        font-size: 0.812em;
     }
 }
 @media(max-width: 600px) {
     html {
-        font-size: 9px;
+        font-size: 0.562em;
         font-weight: 400;
     }
     .accordion__title {
