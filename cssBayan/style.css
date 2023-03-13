@@ -123,6 +123,9 @@ body {
     border-radius: 1em;
     cursor: pointer;
 }
+.img__block:active {
+    border: 0.2em solid #fff;
+}
 .img__text {
     display: block;
     font-weight: 700;
