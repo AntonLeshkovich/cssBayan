@@ -61,6 +61,7 @@ body {
     border-radius: 0.1em;
     background: rgba(0, 0, 0, 0.6);
     transition: background .3s;
+    cursor: default;
 }
 .accordion__head {
     display: grid;
@@ -74,7 +75,7 @@ body {
     font-size: 1.25rem;
     font-weight: 700;
     color: rgba(0, 0, 0, 0.6);
-    cursor: pointer;
+    cursor: default;
     transition: height .3s, color .3s;
 }
 .grid-text {
@@ -85,6 +86,19 @@ body {
 }
 .grid-content {
     grid-area: content;
+}
+.item__text {
+    cursor: pointer;
+}
+.item__icon {
+    display: block;
+    width: 1.2em;
+    height: 1.2em;
+    background: url("./img/close-icon.svg") center/cover;
+    transform: rotate(45deg) scale(0.8);
+    opacity: 0;
+    transition: transform .3s, opacity .3s;
+    cursor: pointer;
 }
 .accordion__input {
     width: 0;
@@ -114,15 +128,6 @@ body {
 .accordion__input:checked + .item__line {
     background: #fff;
 }
-.item__icon {
-    display: block;
-    width: 1.2em;
-    height: 1.2em;
-    background: url("./img/close-icon.svg") center/cover;
-    transform: rotate(45deg) scale(0.8);
-    opacity: 0;
-    transition: transform .3s, opacity .3s;
-}
 .accordion__content {
     display: flex;
     align-items: center;
@@ -137,6 +142,7 @@ body {
     height: 0;
     transition: height .3s;
     border-radius: 1em;
+    cursor: pointer;
 }
 .img__text {
     display: block;
@@ -226,9 +232,6 @@ body {
     .accordion__item:hover .img__text {
         opacity: 1;
     }
-    /* .accordion__item:hover .item__text {
-        height: 1em;
-    } */
 }
 
 @media(max-width: 900px) {
